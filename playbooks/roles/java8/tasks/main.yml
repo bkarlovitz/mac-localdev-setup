@@ -1,0 +1,3 @@
+---
+- name: Install Java 8 via Homebrew Cask
+  shell: brew cask install java8
