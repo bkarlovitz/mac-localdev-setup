@@ -1,0 +1,3 @@
+---
+- name: Install Maven 3.3 via Homebrew
+  shell: brew install maven
