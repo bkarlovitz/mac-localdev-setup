@@ -3,3 +3,5 @@
   roles:
   - java8
   - intellij
+  - maven
+  - nodejs
