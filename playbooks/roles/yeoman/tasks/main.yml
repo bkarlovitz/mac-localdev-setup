@@ -1,0 +1,3 @@
+---
+- name: Install Yeoman via npm
+  shell: npm install --global yo
