@@ -1,3 +1,3 @@
 ---
-- name: Install Yeoman via npm
-  shell: npm install --global yo
+- name: Install Yeoman via Yarn
+  shell: yarn global add yo
