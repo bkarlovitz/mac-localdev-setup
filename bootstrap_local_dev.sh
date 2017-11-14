@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Get the latest version of Homebrew.
+# Make sure Homebrew is installed.
 which -s brew
 if [[ $? != 0 ]] ; then
     echo "Installing Homebrew ..."
@@ -16,10 +16,12 @@ fi
 echo "Updating Homebrew ..."
 brew update   # this also updates homebrew cask and versions
 
-# Get the latest version of Ansible.
-echo "Updating Ansible ..."
-brew install ansible
-
+# Make sure Ansible is installed
+which -s ansible
+if [[ $? != 0 ]] ; then
+    echo "Installing Ansible ..."
+    brew install ansible
+fi
 
 # Run the local dev Ansible playbook.
 ansible-playbook --ask-become-pass -i inventories/development playbooks/setup-localdev.yml
