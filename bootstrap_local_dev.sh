@@ -17,4 +17,4 @@ echo "Updating Ansible ..."
 brew install ansible
 
 # Run the local dev Ansible playbook.
-ansible-playbook -i inventories/development playbooks/setup-localdev.yml
+ansible-playbook --ask-become-pass -i inventories/development playbooks/setup-localdev.yml

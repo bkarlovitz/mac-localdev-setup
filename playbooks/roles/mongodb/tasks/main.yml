@@ -1,3 +1,12 @@
 ---
 - name: Install MongoDB 3.4.x via Homebrew
   shell: brew install mongodb
+
+- name: Create /data/db directory
+  file:
+    path: /data/db
+    state: directory
+    mode: 0774
+    owner: root
+    group: staff
+  become: true
