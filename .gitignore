@@ -1,1 +1,5 @@
-*.retry
+playbooks/setup-localdev.retry
+
+# ignore intellij files
+.idea/
+mac-localdev-setup.iml
